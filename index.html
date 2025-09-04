@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladingproai - Jasa Pembuatan Website & Landing Page Profesional</title>
+    
+    <meta name="description" content="Jasa pembuatan website dan landing page profesional dengan harga murah, mulai dari Rp 149.000. Gratis hosting selamanya, revisi tak terbatas, dan proses kilat 1 hari jadi. Cocok untuk UMKM, freelancer, dan semua jenis bisnis.">
+    <meta name="keywords" content="jasa website, jasa landing page, landing page murah, landing page kilat, landing page gratis, landing page SEO, landing page konversi tinggi, landing page terbaik, landing page profesional, website UMKM, landing page untuk semua bisnis, website murah, website profesional, buat landing page cepat, buat website mudah">
+    <meta name="author" content="Ladingproai">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* New Color Palette based on the provided logo */
+        :root {
+            --primary-color: #4CAF50; /* Green from the logo */
+            --secondary-color: #388E3C; /* Darker green */
+            --accent-color: #FFC107; /* Amber Gold for highlights */
+            --light-bg: #F8F9FA; /* Off-white */
+            --dark-bg: #212529; /* Dark blue-grey for footer */
+            --text-dark: #333333; /* Darker text */
+            --text-light: #ffffff;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+
+            /* Gradient colors for the logo style */
+            --logo-blue: #007bff; /* A vibrant blue */
+            --logo-purple: #6f42c1; /* A rich purple */
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background-color: var(--card-bg);
+            padding: 20px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-size: 26px;
+            font-weight: 700;
+            /* Use a gradient similar to the logo for the text */
+            background: linear-gradient(to right, var(--logo-blue), var(--logo-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 30px;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        .nav a:hover {
+            /* Use the primary color for hover */
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .hamburger-btn {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--card-bg);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                padding: 15px 0;
+                border-radius: 0 0 15px 15px;
+            }
+
+            .nav a {
+                padding: 12px 20px;
+                border-bottom: 1px solid var(--border-color);
+                width: 100%;
+                text-align: center;
+                margin: 0;
+            }
+            .nav a:last-child {
+                border-bottom: none;
+            }
+
+            .hamburger-btn {
+                display: block;
+            }
+        }
+
+        .hero {
+            /* Background matching logo's gradient */
+            background: linear-gradient(135deg, #007bff, #6f42c1);
+            color: var(--text-light);
+            text-align: center;
+            padding: 120px 20px;
+            border-radius: 0 0 70px 70px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            font-weight: 400;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-7px);
+            background-color: #ffb300;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .floating-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366; /* WhatsApp Green */
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .floating-button i {
+            font-size: 1.3rem;
+        }
+
+        .floating-button:hover {
+            transform: translateY(-5px) scale(1.03);
+            background-color: #1da851;
+        }
+
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 70px;
+            background: linear-gradient(to right, var(--logo-blue), var(--logo-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .section-dark {
+            background: linear-gradient(135deg, var(--logo-purple), #1a1a2e);
+            color: var(--text-light);
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            padding: 45px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border: 1px solid var(--border-color);
+        }
+        
+        .card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .card p {
+            color: #555;
+            font-size: 1.05rem;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align items to the top */
+            text-align: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .step-item {
+            flex: 1;
+            min-width: 280px;
+            padding: 30px;
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .step-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .step-icon {
+            font-size: 3.5rem;
+            background: linear-gradient(45deg, var(--logo-blue), var(--logo-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .step-item h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 15px;
+            color: var(--primary-color);
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .pricing-card {
+            background-color: var(--card-bg);
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border: 3px solid transparent;
+            transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--logo-blue); /* Use logo blue for hover border */
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+        }
+
+        .pricing-card.pro {
+            background: linear-gradient(135deg, var(--logo-blue), var(--logo-purple));
+            color: var(--text-light);
+            transform: scale(1.08) translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+            border-color: var(--accent-color);
+        }
+        
+        .pricing-card.pro .price {
+            color: var(--accent-color);
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        .pricing-card.pro h3 {
+             color: var(--text-light);
+        }
+
+        .pricing-card h3 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .price {
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+        }
+        
+        .price span {
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        
+        .pricing-card ul li {
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .pricing-card ul li::before {
+            content: '✓';
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-right: 12px;
+            font-size: 1.3rem;
+        }
+        
+        .pricing-card.pro ul li::before {
+            color: var(--accent-color);
+        }
+        
+        .pricing-cta {
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .pricing-card.pro .pricing-cta {
+            background-color: var(--text-light);
+            color: var(--primary-color);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+        }
+        
+        .pricing-card.pro .pricing-cta:hover {
+            background-color: #e0e0e0;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+        }
+        
+        .pricing-cta:hover {
+            background-color: #ffb300;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+        }
+        
+        .testimonials {
+            background-color: var(--card-bg);
+            padding: 100px 0;
+        }
+        
+        .testimonial-card {
+            background-color: var(--light-bg);
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+            border: 1px solid var(--border-color);
+        }
+        
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+            color: #444;
+        }
+        
+        .testimonial-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--text-light);
+            background-color: var(--primary-color);
+            flex-shrink: 0;
+        }
+        
+        .testimonial-info h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .testimonial-info small {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        .faq-item {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            margin-bottom: 18px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            padding: 25px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            transition: background-color 0.3s ease;
+        }
+        .faq-question:hover {
+            background-color: var(--light-bg);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+            color: #6c757d;
+            font-size: 1.05rem;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 250px; /* Increased for longer answers */
+            padding: 20px 30px;
+        }
+        
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .benefit-card {
+            background-color: var(--card-bg);
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        .benefit-card h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 0;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .benefit-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .fitur-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+        }
+        
+        .fitur-card {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border: 1px solid var(--border-color);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .fitur-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .fitur-card h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 0;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .fitur-card p {
+            font-size: 1.05rem;
+            color: #555;
+        }
+
+        /* Portfolio/Mockup Section */
+        .portfolio {
+            background-color: var(--light-bg);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .mockup-item {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .mockup-item:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+        }
+
+        .mockup-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mockup-info {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .mockup-info h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .mockup-info p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .mockup-info .cta-button {
+            padding: 12px 25px;
+            font-size: 1rem;
+            box-shadow: none; /* Remove extra shadow */
+        }
+        .mockup-info .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .cta-final {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--logo-blue), var(--logo-purple));
+            color: var(--text-light);
+            border-radius: 20px;
+            margin: 50px auto;
+            max-width: 900px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .cta-final h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 3px 5px rgba(0,0,0,0.1);
+        }
+        .cta-final p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        .cta-final .cta-button {
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+        }
+        .cta-final .cta-button:hover {
+            background-color: #ffb300;
+        }
+
+
+        .footer {
+            background-color: #1a1a2e; /* Deep dark blue, matching logo's background feel */
+            color: #ccc;
+            text-align: center;
+            padding: 50px 0;
+            font-size: 0.95rem;
+        }
+        
+        .footer p {
+            margin: 0;
+        }
+
+        .social-popup-container {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 998;
+        }
+
+        .social-popup {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 15px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            opacity: 0;
+            transform: translateY(100px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        .social-popup.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .social-popup-content {
+            flex-grow: 1;
+        }
+
+        .social-popup-content p {
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: var(--text-dark);
+        }
+
+        .social-popup-content .popup-name {
+            font-weight: 600;
+        }
+
+        .social-popup-content .popup-text {
+            color: #777;
+        }
+
+        .seo-keywords {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+        }
+        .seo-keywords h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+        .seo-keywords p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 15px;
+                border-radius: 0 0 40px 40px;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .section {
+                padding: 60px 0;
+            }
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 40px;
+            }
+            .card, .step-item, .pricing-card, .testimonial-card, .faq-item, .benefit-card, .fitur-card, .mockup-item {
+                padding: 30px;
+                border-radius: 15px;
+            }
+            .pricing-card {
+                transform: none !important; /* Disable scale on mobile for pro card */
+            }
+            .pricing-card.pro {
+                transform: scale(1.03) !important; /* Slightly bigger, but not too much */
+            }
+            .pricing-card.pro:hover {
+                transform: scale(1.06) translateY(-5px) !important;
+            }
+            .floating-button {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+            .cta-final {
+                padding: 60px 20px;
+                margin: 30px auto;
+            }
+            .cta-final h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 0.9rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .card-grid, .steps, .pricing-grid, .fitur-grid, .portfolio-grid {
+                gap: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+            <a href="#" class="logo-text">Ladingproai</a>
+            <nav id="main-nav" class="nav">
+                <a href="#hero">Beranda</a>
+                <a href="#kenapa-website">Mengapa Website?</a>
+                <a href="#fitur-unggulan">Fitur Kami</a>
+                <a href="#portfolio">Portofolio</a>
+                <a href="#harga">Harga</a>
+                <a href="#testimoni">Testimoni</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            <div class="hamburger-btn" onclick="toggleNav()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero" data-aos="fade-up">
+            <div class="container">
+                <h1>Website & Landing Page Profesional dalam Genggaman Anda</h1>
+                <p>Kami hadir untuk membantu bisnis Anda berkembang, tanpa ribet, tanpa pusing mikirin koding! Tingkatkan kredibilitas & penjualan Anda dengan mudah.</p>
+                <a href="https://wa.me/628978536404" class="cta-button">BUAT WEBSITE SAYA SEKARANG</a>
+            </div>
+        </section>
+
+        <section id="masalah" class="section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Pusing Bikin Website? Kamu Nggak Sendirian!</h2>
+                <div class="card-grid">
+                    <div class="card" data-aos="fade-up" data-aos-delay="100">
+                        <h3>Biaya Mahal</h3>
+                        <p>Sewa desainer atau developer bisa menguras kantong. Solusi kami jauh lebih hemat dan efisien.</p>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Proses Bertele-tele</h3>
+                        <p>Pembuatan website seringkali butuh waktu berminggu-minggu, bahkan berbulan-bulan. Kami hadir untuk kecepatan.</p>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-delay="300">
+                        <h3>Harus Punya Skill Koding</h3>
+                        <p>Bingung dengan bahasa pemrograman dan desain? Ladingproai hadir untuk Anda, tanpa perlu koding.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="kenapa-website" class="section" style="background-color: var(--card-bg);">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Kenapa Sih Bisnis Anda Butuh Website?</h2>
+                <div class="benefit-grid">
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                        <h4>Jangkauan Global 24/7</h4>
+                        <p>Bisnis Anda dapat diakses kapan saja, dari mana saja. Pelanggan bisa melihat produk/jasa Anda kapan pun mereka butuh.</p>
+                    </div>
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                        <h4>Kredibilitas & Profesionalitas</h4>
+                        <p>Website yang bagus akan membuat bisnis terlihat lebih terpercaya dan profesional di mata calon pelanggan.</p>
+                    </div>
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                        <h4>Peluang Bisnis Lebih Besar</h4>
+                        <p>Dengan website, Anda berpeluang menjangkau lebih banyak pelanggan dan meningkatkan penjualan secara signifikan.</p>
+                    </div>
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+                        <h4>Marketing yang Efektif</h4>
+                        <p>Website jadi pusat semua strategi marketing digital Anda, dari SEO, sosial media, sampai email marketing.</p>
+                    </div>
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="500">
+                        <h4>Hemat Biaya Operasional</h4>
+                        <p>Dibanding buka toko fisik, biaya operasionalnya jauh lebih hemat. Nggak perlu sewa tempat, listrik, atau pegawai banyak.</p>
+                    </div>
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="600">
+                        <h4>Data & Analitik</h4>
+                        <p>Website memberikan wawasan berharga tentang perilaku pelanggan yang bisa Anda gunakan untuk strategi bisnis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solusi" class="section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Solusi Kilat & Mudah dari Ladingproai</h2>
+                <div class="steps">
+                    <div class="step-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-icon">1</div>
+                        <h4>Konsultasi via WhatsApp</h4>
+                        <p>Cukup chat kami, ceritakan kebutuhan website atau landing page Anda dengan detail.</p>
+                    </div>
+                    <div class="step-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-icon">2</div>
+                        <h4>Proses Kilat 1 Hari Jadi</h4>
+                        <p>Tim profesional kami akan merancang website impian Anda dalam hitungan hari. Bahkan bisa **1 hari jadi**!</p>
+                    </div>
+                    <div class="step-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-icon">3</div>
+                        <h4>Website Jadi!</h4>
+                        <p>Tara! Website Anda siap digunakan, langsung online dan profesional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fitur-unggulan" class="section" style="background-color: var(--card-bg);">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Fitur Unggulan Ladingproai</h2>
+                <div class="fitur-grid">
+                    <div class="fitur-card" data-aos="fade-up" data-aos-delay="100">
+                        <h4>Bebas Pusing Mikirin Koding</h4>
+                        <p>Lupakan kode rumit! Fokus saja kembangkan bisnis Anda, serahkan teknisnya pada kami.</p>
+                    </div>
+                    <div class="fitur-card" data-aos="fade-up" data-aos-delay="200">
+                        <h4>Garansi 100% Uang Kembali</h4>
+                        <p>Jika website tidak tampil, error, atau rusak karena kesalahan kami, uang Anda kembali 100% tanpa ribet!</p>
+                    </div>
+                    <div class="fitur-card" data-aos="fade-up" data-aos-delay="300">
+                        <h4>Dukungan Penuh dari Tim Profesional</h4>
+                        <p>Kami siap membantu dan berdiskusi untuk memastikan website Anda sesuai dengan keinginan.</p>
+                    </div>
+                    <div class="fitur-card" data-aos="fade-up" data-aos-delay="400">
+                        <h4>Optimasi SEO Dasar</h4>
+                        <p>Struktur website dibuat SEO-friendly agar mudah ditemukan di Google dan mesin pencari lainnya.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="siapa-cocok" class="section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Siapa Saja yang Cocok Pakai Ladingproai?</h2>
+                <div class="card-grid">
+                    <div class="card" data-aos="fade-up" data-aos-delay="100">
+                        <h3>UMKM & Toko</h3>
+                        <p>Punya warung, cafe, jualan online/offline? Kami bantu bangun kehadiran online yang kuat.</p>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Freelancer & Profesional</h3>
+                        <p>Tampilkan portofolio, CV, atau bio link yang keren dan terpercaya untuk menarik klien.</p>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-delay="300">
+                        <h3>Penyelenggara Event</h3>
+                        <p>Bikin halaman informasi untuk workshop, seminar, atau konser, lengkap dengan pendaftaran.</p>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-delay="400">
+                        <h3>Personal Branding</h3>
+                        <p>Tingkatkan citra diri Anda dengan website personal yang unik dan profesional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section portfolio" style="background-color: var(--light-bg);">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Lihat Karya Profesional Kami</h2>
+                <div class="portfolio-grid">
+                    <div class="mockup-item" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="portfolio-jasa-epoxy-trowel.jpg" alt="Mockup Website Jasa Epoxy & Trowel">
+                        <div class="mockup-info">
+                            <h3>Jasa Epoxy & Trowel Terpercaya</h3>
+                            <p>Website landing page modern untuk jasa lantai epoxy dan trowel dengan desain elegan.</p>
+                            <a href="https://www.masteryepoxy.com/" class="cta-button">Lihat Demo</a>
+                        </div>
+                    </div>
+                    <div class="mockup-item" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="portfolio-kafi-law-firm.jpg" alt="Mockup Website Kafi Law Firm">
+                        <div class="mockup-info">
+                            <h3>Kafi Law Firm - Firma Hukum</h3>
+                            <p>Website korporat profesional untuk firma hukum, menampilkan layanan dan tim ahli.</p>
+                            <a href="https://www.kafilawfirm.web.id/" class="cta-button">Lihat Demo</a>
+                        </div>
+                    </div>
+                    <div class="mockup-item" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="portfolio-nagata-gold.jpg" alt="Mockup Website Nagata Gold">
+                        <div class="mockup-info">
+                            <h3>Nagata Gold - Jual Emas Tanpa Surat</h3>
+                            <p>Desain website e-commerce sederhana dan elegan untuk penjualan emas dengan informasi transparan.</p>
+                            <a href="https://www.jualbeliemaspurwokerto.web.id/" class="cta-button">Lihat Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="harga" class="section" style="background-color: var(--card-bg);">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Pilih Paket Terbaik untuk Bisnis Anda</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card" data-aos="fade-right" data-aos-delay="100">
+                        <h3>Paket Biasa</h3>
+                        <div class="price">Rp 149<span style="font-size: 1rem;">.000</span></div>
+                        <ul>
+                            <li>**Khusus 1 Halaman Landing Page**</li>
+                            <li>**Pembuatan Kilat 1 Hari Jadi**</li>
+                            <li>Gratis Domain **.web.id** atau **.my.id**</li>
+                            <li>Hosting Gratis Selamanya</li>
+                            <li>**Revisi Gratis Selamanya**</li>
+                            <li>Tanpa E-course WhatsApp Copywriting</li>
+                        </ul>
+                        <a href="https://wa.me/628978536404?text=Halo%20saya%20tertarik%20dengan%20Paket%20Biasa%20Rp%20149.000." class="pricing-cta">Pesan Sekarang</a>
+                    </div>
+                    
+                    <div class="pricing-card pro" data-aos="fade-left" data-aos-delay="200">
+                        <h3>Paket Pro</h3>
+                        <div class="price">Rp 679<span style="font-size: 1rem;">.000</span></div>
+                        <ul>
+                            <li>**Hingga 3 Halaman Website**</li>
+                            <li>**Pembuatan Kilat 1-3 Hari**</li>
+                            <li>Gratis Domain **.COM**</li>
+                            <li>Hosting Gratis Selamanya</li>
+                            <li>**Update Konten Gratis Selamanya**</li>
+                            <li>Gratis **E-course WhatsApp Copywriting**</li>
+                        </ul>
+                        <a href="https://wa.me/628978536404?text=Halo%20saya%20tertarik%20dengan%20Paket%20Pro%20Rp%20679.000." class="pricing-cta">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="seo-keywords" data-aos="fade-up">
+            <div class="container">
+                <h3>Pencarian Terkait:</h3>
+                <p>
+                    jasa web | jasa landing page | jasa website murah | landing page cepat | landing page 1 hari jadi | landing page gratis | landing page SEO | landing page konversi tinggi | website terbaik | jasa website profesional | website UMKM | website bisnis | landing page untuk semua bisnis | jasa pembuatan website murah | jasa web profesional | landing page terbaik 2024
+                </p>
+            </div>
+        </div>
+
+        <section class="cta-final" data-aos="zoom-in">
+            <div class="container">
+                <h2 data-aos="fade-up">Jangan Tunda Lagi! <br>Dapatkan Website Profesional Anda Sekarang!</h2>
+                <p data-aos="fade-up" data-aos-delay="100">Hanya dengan **Rp 149.000**, Anda bisa mendapatkan website & landing page mewah, profesional, dengan **gratis hosting**, **gratis domain**, dan **revisi gratis selamanya**. Ini bukan janji, ini bukti!</p>
+                <a href="https://wa.me/628978536404?text=Halo%20Ladingproai,%20saya%20siap%20membuat%20website%20profesional%20sekarang." class="cta-button" data-aos="fade-up" data-aos-delay="200">BUAT WEBSITE SAYA SEKARANG</a>
+            </div>
+        </section>
+
+        <section id="testimoni" class="section testimonials">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Apa Kata Mereka?</h2>
+                <div class="card-grid">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <p>"Prosesnya cepat banget, hasilnya keren! Nggak nyangka website bisnis saya bisa jadi seprofesional ini. Recomended banget!"</p>
+                        <div class="testimonial-info">
+                            <div class="testimonial-avatar" style="background-color: #007bff;">AK</div>
+                            <div>
+                                <h4>Arif Kurniawan</h4>
+                                <small>Pemilik UMKM</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <p>"Pilihan terbaik untuk yang nggak ngerti koding. Fitur-fiturnya lengkap dan pelayanannya ramah. Langsung nambah kepercayaan diri jualan online!"</p>
+                        <div class="testimonial-info">
+                             <div class="testimonial-avatar" style="background-color: #6f42c1;">BP</div>
+                            <div>
+                                <h4>Bella Putri</h4>
+                                <small>Freelancer</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                        <p>"Bonus kursus copywritingnya sangat membantu, jadi nggak cuma punya website, tapi juga tahu cara memaksimalkannya. Sukses terus Ladingproai!"</p>
+                        <div class="testimonial-info">
+                            <div class="testimonial-avatar" style="background-color: #FFC107;">YA</div>
+                            <div>
+                                <h4>Yusuf A.</h4>
+                                <small>Penyelenggara Event</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section" style="background-color: var(--card-bg);">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Masih Ada Pertanyaan? Kami Bantu Jawab!</h2>
+                <div class="faq-list">
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="faq-question">
+                            Apakah saya harus mengerti koding untuk menggunakan jasa ini?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Tentu tidak. Seluruh proses pembuatan website akan dikerjakan oleh tim profesional kami. Anda hanya perlu memberikan informasi bisnis Anda dan kami akan mewujudkannya menjadi website yang profesional.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="faq-question">
+                            Apakah ada biaya tersembunyi?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Tidak ada. Harga yang tertera sudah final dan mencakup semua layanan yang disebutkan dalam paket yang Anda pilih. Transparan dan terjamin.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="faq-question">
+                            Berapa lama proses pembuatan website?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Setelah semua data dan konten kami terima, proses pengerjaan akan kami lakukan secepat mungkin. Website Anda akan siap dalam hitungan hari saja.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="faq-question">
+                            Apakah saya bisa merevisi website setelah jadi?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Bisa. Untuk Paket Biasa, Anda mendapatkan **revisi gratis selamanya**. Untuk Paket Pro, Anda bisa mendapatkan **update konten gratis selamanya**.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                        <div class="faq-question">
+                            Apakah data saya aman?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Kami sangat menjaga kerahasiaan dan keamanan data klien. Semua data yang Anda berikan akan dikelola dengan profesional dan tidak akan disebarkan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="social-popup-container">
+        <div class="social-popup" id="social-popup">
+            <div class="social-popup-content">
+                <p><span class="popup-name"></span> baru saja membeli <br> paket **<span class="popup-package"></span>**</p>
+                <small class="popup-text">dari <span class="popup-location"></span></small>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/628978536404?text=Halo%20Ladingproai,%20saya%20tertarik%20dengan%20layanan%20Anda%20dan%20ingin%20konsultasi%20gratis." class="floating-button">
+        <i class="fab fa-whatsapp"></i> Gratis Konsultasi
+    </a>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Ladingproai. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            mirror: false,
+        });
+
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+
+        function toggleNav() {
+            const nav = document.getElementById('main-nav');
+            if (nav.style.display === "flex") {
+                nav.style.display = "none";
+            } else {
+                nav.style.display = "flex";
+            }
+        }
+
+        // Social Pop-up Script
+        const names = [
+            "Budi Santoso", "Siti Aisyah", "Joko Susilo", "Dewi Sartika", "Rizky Firmansyah",
+            "Ayu Lestari", "Muhammad Rasyid", "Nurul Hidayah", "Faisal Ramadhan", "Lisa Amelia"
+        ];
+        const locations = [
+            "Jakarta Pusat", "Bogor, Jawa Barat", "Surabaya, Jawa Timur", "Bandung, Jawa Barat", "Yogyakarta",
+            "Makassar, Sulawesi Selatan", "Medan, Sumatera Utara", "Denpasar, Bali", "Semarang, Jawa Tengah", "Palembang, Sumatera Selatan"
+        ];
+        const packages = ["Paket Biasa", "Paket Pro"];
+
+        const popup = document.getElementById('social-popup');
+        const popupName = document.querySelector('.popup-name');
+        const popupLocation = document.querySelector('.popup-location');
+        const popupPackage = document.querySelector('.popup-package');
+
+        function showPopup() {
+            const randomName = names[Math.floor(Math.random() * names.length)];
+            const randomLocation = locations[Math.floor(Math.random() * locations.length)];
+            const randomPackage = packages[Math.floor(Math.random() * packages.length)];
+
+            popupName.textContent = randomName;
+            popupLocation.textContent = randomLocation;
+            popupPackage.textContent = randomPackage;
+            popup.classList.add('active');
+
+            setTimeout(() => {
+                popup.classList.remove('active');
+                setTimeout(showPopup, Math.random() * 10000 + 5000); // Tampil lagi antara 5-15 detik
+            }, 5000); // Tampil selama 5 detik
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(showPopup, 3000); // Tampil pop-up pertama setelah 3 detik
+        });
+    </script>
+
+</body>
+</html>
