@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Afiliasi Ladingproai - Komisi 30% + Bonus Website</title>
+    
+    <meta name="description" content="Gabung program afiliasi Ladingproai dan dapatkan komisi 30% dari setiap penjualan paket website. Dapatkan 1 pelanggan dan dapatkan bonus website promosi gratis! Daftar sekarang!">
+    <meta name="keywords" content="afiliasi, program afiliasi, komisi afiliasi, afiliasi website, cari uang online, bonus website gratis, Ladingproai affiliate">
+    <meta name="author" content="Ladingproai">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* SEMUA GAYA CSS DARI index.html ANDA DITEMPEL DI SINI UNTUK KONSISTENSI */
+        :root {
+            --primary-color: #4CAF50; /* Green from the logo */
+            --secondary-color: #388E3C; /* Darker green */
+            --accent-color: #FFC107; /* Amber Gold for highlights */
+            --light-bg: #F8F9FA; /* Off-white */
+            --dark-bg: #212529; /* Dark blue-grey for footer */
+            --text-dark: #333333; /* Darker text */
+            --text-light: #ffffff;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+            --logo-blue: #007bff;
+            --logo-purple: #6f42c1;
+        }
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: var(--light-bg); color: var(--text-dark); line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .header { background-color: var(--card-bg); padding: 20px 0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); position: sticky; top: 0; z-index: 1000; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo-text { font-size: 26px; font-weight: 700; background: linear-gradient(to right, var(--logo-blue), var(--logo-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
+        .nav { display: flex; align-items: center; }
+        .nav a { color: var(--text-dark); text-decoration: none; font-weight: 600; margin-left: 30px; transition: color 0.3s ease, transform 0.2s ease; }
+        .nav a:hover { color: var(--primary-color); transform: translateY(-2px); }
+        .hamburger-btn { display: none; font-size: 28px; cursor: pointer; color: var(--primary-color); }
+        .hero { background: linear-gradient(135deg, #007bff, #6f42c1); color: var(--text-light); text-align: center; padding: 120px 20px; border-radius: 0 0 70px 70px; overflow: hidden; position: relative; }
+        .hero h1 { font-size: 3.8rem; font-weight: 700; margin-bottom: 25px; line-height: 1.2; text-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        .hero p { font-size: 1.3rem; font-weight: 400; max-width: 800px; margin: 0 auto 30px; opacity: 0.9; }
+        .hero .bonus-highlight { font-size: 1.4rem; font-weight: 700; color: var(--accent-color); margin-bottom: 50px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+        .cta-button { display: inline-block; background-color: var(--accent-color); color: var(--text-dark); padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); }
+        .cta-button:hover { transform: translateY(-7px); background-color: #ffb300; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); }
+        .section { padding: 100px 0; position: relative; }
+        .section-title { text-align: center; font-size: 3rem; font-weight: 700; margin-bottom: 70px; background: linear-gradient(to right, var(--logo-blue), var(--logo-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 1px 1px 3px rgba(0,0,0,0.1); }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .card { background-color: var(--card-bg); border-radius: 20px; padding: 45px; text-align: center; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); transition: transform 0.4s ease, box-shadow 0.4s ease; border: 1px solid var(--border-color); }
+        .card:hover { transform: translateY(-12px); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); }
+        .card h3 { font-size: 1.8rem; font-weight: 600; margin-bottom: 20px; color: var(--primary-color); }
+        .card p { color: #555; font-size: 1.05rem; }
+        .steps { display: flex; justify-content: center; align-items: flex-start; text-align: center; gap: 50px; flex-wrap: wrap; }
+        .step-item { flex: 1; min-width: 280px; padding: 30px; background-color: var(--card-bg); border-radius: 20px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); transition: transform 0.4s ease, box-shadow 0.4s ease; }
+        .step-item:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); }
+        .step-icon { font-size: 3.5rem; background: linear-gradient(45deg, var(--logo-blue), var(--logo-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px; }
+        .step-item h4 { font-size: 1.5rem; font-weight: 700; margin-top: 15px; color: var(--primary-color); }
+        .faq-item { background-color: var(--card-bg); border-radius: 20px; margin-bottom: 18px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07); overflow: hidden; border: 1px solid var(--border-color); }
+        .faq-question { padding: 25px 30px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 600; font-size: 1.2rem; color: var(--text-dark); transition: background-color 0.3s ease; }
+        .faq-question:hover { background-color: var(--light-bg); }
+        .faq-question::after { content: '+'; font-size: 1.8rem; color: var(--primary-color); transition: transform 0.3s ease; }
+        .faq-item.active .faq-question::after { transform: rotate(45deg); }
+        .faq-answer { padding: 0 30px; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out; color: #6c757d; font-size: 1.05rem; }
+        .faq-item.active .faq-answer { max-height: 250px; padding: 20px 30px; }
+        .cta-final { text-align: center; padding: 80px 20px; background: linear-gradient(135deg, var(--logo-blue), var(--logo-purple)); color: var(--text-light); border-radius: 20px; margin: 50px auto; max-width: 900px; box-shadow: 0 15px 30px rgba(0,0,0,0.2); position: relative; }
+        .cta-final h2 { font-size: 2.8rem; font-weight: 700; margin-bottom: 20px; text-shadow: 0 3px 5px rgba(0,0,0,0.1); }
+        .cta-final p { font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9; }
+        .cta-final .cta-button { background-color: var(--accent-color); color: var(--text-dark); }
+        .cta-final .cta-button:hover { background-color: #ffb300; }
+        .footer { background-color: #1a1a2e; color: #ccc; text-align: center; padding: 50px 0; font-size: 0.95rem; }
+        .footer p { margin: 0; }
+        
+        /* Gaya khusus untuk halaman afiliasi */
+        .icon-card { display: flex; flex-direction: column; align-items: center; padding: 30px; }
+        
+        /* === PERUBAHAN CSS DI SINI === */
+        /* Gaya baru untuk ikon Font Awesome */
+        .icon-card .fa-icon {
+            font-size: 5rem; /* Ukuran ikon */
+            margin-bottom: 25px;
+            background: linear-gradient(45deg, var(--logo-blue), var(--logo-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* === AKHIR PERUBAHAN CSS === */
+
+        .commission-card { background: linear-gradient(135deg, var(--logo-blue), var(--logo-purple)); color: var(--text-light); padding: 50px; border-radius: 25px; text-align: center; box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+        .commission-card h3 { font-size: 2.5rem; margin-top: 0; margin-bottom: 30px; }
+        .commission-details { display: flex; justify-content: space-around; gap: 30px; flex-wrap: wrap; }
+        .commission-item { background-color: rgba(255, 255, 255, 0.1); padding: 25px; border-radius: 15px; flex-basis: 300px; }
+        .commission-item h4 { font-size: 1.4rem; margin-top: 0; margin-bottom: 10px; opacity: 0.8; }
+        .commission-item .price-tag { font-size: 2.8rem; font-weight: 700; color: var(--accent-color); text-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+
+        @media (max-width: 768px) {
+            .nav { display: none; flex-direction: column; position: absolute; top: 80px; left: 0; width: 100%; background-color: var(--card-bg); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); padding: 15px 0; border-radius: 0 0 15px 15px; }
+            .nav a { padding: 12px 20px; border-bottom: 1px solid var(--border-color); width: 100%; text-align: center; margin: 0; }
+            .nav a:last-child { border-bottom: none; }
+            .hamburger-btn { display: block; }
+            .hero { padding: 80px 15px; border-radius: 0 0 40px 40px; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1rem; }
+            .hero .bonus-highlight { font-size: 1.1rem; margin-bottom: 40px; }
+            .section { padding: 60px 0; }
+            .section-title { font-size: 2rem; margin-bottom: 40px; }
+            .card, .step-item, .faq-item { padding: 30px; border-radius: 15px; }
+            .cta-final { padding: 60px 20px; margin: 30px auto; }
+            .cta-final h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo-text">Ladingproai</a>
+            <nav id="main-nav" class="nav">
+                <a href="#hero">Beranda Afiliasi</a>
+                <a href="#keuntungan">Keuntungan</a>
+                <a href="#cara-kerja">Cara Kerja</a>
+                <a href="#simulasi">Simulasi Komisi</a>
+                <a href="#faq-afiliasi">FAQ</a>
+                <a href="index.html">Halaman Utama</a>
+            </nav>
+            <div class="hamburger-btn" onclick="toggleNav()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero" data-aos="fade-up">
+            <div class="container">
+                <h1>Gabung Program Afiliasi & Dapatkan Komisi 30%</h1>
+                <p>Bantu promosikan jasa pembuatan website profesional dari Ladingproai dan dapatkan penghasilan dari setiap penjualan yang Anda hasilkan. Tanpa modal, tanpa ribet!</p>
+                <p class="bonus-highlight">PLUS, Dapatkan 1 Website Promosi GRATIS Setelah Penjualan Pertama Anda Berhasil!</p>
+                <a href="https://wa.me/628978536404?text=Halo%20Ladingproai,%20saya%20tertarik%20untuk%20mendaftar%20program%20afiliasi%20dan%20mendapatkan%20bonus%20website." class="cta-button">DAFTAR JADI AFILIASI SEKARANG</a>
+            </div>
+        </section>
+
+        <section id="keuntungan" class="section" style="background-color: var(--card-bg);">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Keuntungan Maksimal Untuk Anda</h2>
+                <div class="card-grid">
+                    <div class="card icon-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-sack-dollar fa-icon"></i>
+                        <h3>Komisi Besar 30%</h3>
+                        <p>Dapatkan bagian 30% dari setiap paket yang terjual melalui link unik Anda. Semakin banyak menjual, semakin besar penghasilan Anda.</p>
+                    </div>
+                    <div class="card icon-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-rocket fa-icon"></i>
+                        <h3>Produk Mudah Dijual</h3>
+                        <p>Hampir semua bisnis butuh website. Anda menawarkan solusi berkualitas dengan harga terjangkau yang sangat dibutuhkan pasar.</p>
+                    </div>
+                    <div class="card icon-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-bolt-lightning fa-icon"></i>
+                        <h3>Pencairan Cepat</h3>
+                        <p>Tidak perlu menunggu lama. Kami memproses pencairan komisi Anda dengan cepat dan transparan setiap akhir bulan.</p>
+                    </div>
+                    <div class="card icon-card" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-gift fa-icon"></i>
+                        <h3>Bonus Website Gratis</h3>
+                        <p>Cukup dapatkan 1 pelanggan pertama, dan kami akan buatkan 1 landing page profesional GRATIS untuk Anda promosikan!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cara-kerja" class="section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Hanya 3 Langkah Mudah</h2>
+                <div class="steps">
+                    <div class="step-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-icon">1</div>
+                        <h4>Daftar & Dapatkan Link</h4>
+                        <p>Hubungi kami via WhatsApp untuk mendaftar. Anda akan langsung mendapatkan link afiliasi unik atas nama Anda.</p>
+                    </div>
+                    <div class="step-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-icon">2</div>
+                        <h4>Promosikan & Bagikan</h4>
+                        <p>Bagikan link Anda di sosial media, blog, atau tawarkan langsung ke teman dan kolega yang membutuhkan website.</p>
+                    </div>
+                    <div class="step-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-icon">3</div>
+                        <h4>Dapatkan Komisi & Bonus!</h4>
+                        <p>Setiap kali ada yang membeli, komisi 30% akan tercatat. Di penjualan pertama, Anda juga dapat bonus website gratis!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="simulasi" class="section" style="background-color: var(--card-bg);">
+            <div class="container">
+                <div class="commission-card" data-aos="zoom-in">
+                    <h3>Simulasi Potensi Penghasilan Anda</h3>
+                    <div class="commission-details">
+                        <div class="commission-item">
+                            <h4>Komisi Paket Biasa</h4>
+                            <p>Harga: Rp 149.000</p>
+                            <div class="price-tag">Rp 44.700</div>
+                            <small>/penjualan</small>
+                        </div>
+                        <div class="commission-item">
+                            <h4>Komisi Paket Pro</h4>
+                            <p>Harga: Rp 679.000</p>
+                            <div class="price-tag">Rp 203.700</div>
+                            <small>/penjualan</small>
+                        </div>
+                    </div>
+                     <p style="margin-top: 30px; font-size: 1.2rem; opacity: 0.9;">Jual <strong>10 Paket Pro</strong> dalam sebulan dan dapatkan lebih dari <strong>Rp 2.000.000</strong>!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq-afiliasi" class="section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Pertanyaan Umum (FAQ)</h2>
+                <div class="faq-list">
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="faq-question">Bagaimana cara mendapatkan bonus website gratis?</div>
+                        <div class="faq-answer">
+                            <p>Sangat mudah! Anda hanya perlu berhasil mendapatkan penjualan pertama Anda melalui link afiliasi. Setelah penjualan terkonfirmasi, tim kami akan menghubungi Anda untuk proses pembuatan website promosi gratis Anda.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="faq-question">Bagaimana cara saya melacak penjualan?</div>
+                        <div class="faq-answer">
+                            <p>Setiap link afiliasi bersifat unik. Tim kami akan mencatat setiap transaksi yang masuk melalui link Anda secara transparan dan akan memberikan laporan rutin kepada Anda.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="faq-question">Kapan komisi akan dibayarkan?</div>
+                        <div class="faq-answer">
+                            <p>Akumulasi komisi akan dibayarkan setiap akhir bulan (tanggal 30 atau 31) langsung ke rekening bank yang Anda daftarkan.</p>
+                        </div>
+                    </div>
+                     <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="faq-question">Siapa saja yang bisa saya tawarkan jasa ini?</div>
+                        <div class="faq-answer">
+                            <p>Siapa saja! Mulai dari teman Anda yang punya UMKM, pemilik toko, kafe, freelancer, profesional, hingga perusahaan yang membutuhkan kehadiran online yang kuat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-final" data-aos="zoom-in">
+            <div class="container">
+                <h2 data-aos="fade-up">Siap Menjadi Partner Kami?</h2>
+                <p data-aos="fade-up" data-aos-delay="100">Jangan lewatkan kesempatan mendapatkan komisi 30% **dan klaim website gratis Anda**! Promosikan layanan berkualitas yang sangat dibutuhkan dan dapatkan penghasilan pasif. Daftar gratis sekarang juga!</p>
+                <a href="https://wa.me/628978536404?text=Halo%20Ladingproai,%20saya%20siap%20mendaftar%20program%20afiliasi%20dan%20mendapatkan%20bonus%20website%20gratis%20sekarang." class="cta-button" data-aos="fade-up" data-aos-delay="200">DAFTAR SEKARANG & MULAI BERPENGHASILAN</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Ladingproai. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            mirror: false,
+        });
+
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        function toggleNav() {
+            const nav = document.getElementById('main-nav');
+            if (nav.style.display === "flex") {
+                nav.style.display = "none";
+            } else {
+                nav.style.display = "flex";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
